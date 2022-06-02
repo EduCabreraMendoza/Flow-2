@@ -1,0 +1,74 @@
+[
+    {
+        "id": "f952b7eb395dcede",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "0712be678a8a8fd7",
+        "type": "inject",
+        "z": "f952b7eb395dcede",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "15",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "15",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 430,
+        "y": 220,
+        "wires": [
+            [
+                "83a974e185f495c0"
+            ]
+        ]
+    },
+    {
+        "id": "f957be4c3faf61ad",
+        "type": "debug",
+        "z": "f952b7eb395dcede",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1010,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "83a974e185f495c0",
+        "type": "function",
+        "z": "f952b7eb395dcede",
+        "name": "Decodificador de hora",
+        "func": "// Crea un objeto Date a partir del payload enviado por timestamp\nvar date = new Date(msg.payload);\n// Cambia el payload para que sea una fecha con formato\nmsg.payload = date.toString();\n// Regresa el mensaje para que se envíe al sigueinte nodo\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 220,
+        "wires": [
+            [
+                "f957be4c3faf61ad"
+            ]
+        ]
+    }
+]
