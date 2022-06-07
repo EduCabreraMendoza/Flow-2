@@ -19,6 +19,11 @@
             {
                 "p": "topic",
                 "vt": "str"
+            },
+            {
+                "p": "g7",
+                "v": "Hola G7",
+                "vt": "str"
             }
         ],
         "repeat": "",
@@ -32,7 +37,8 @@
         "y": 220,
         "wires": [
             [
-                "83a974e185f495c0"
+                "83a974e185f495c0",
+                "23a847fcba4564fd"
             ]
         ]
     },
@@ -45,10 +51,11 @@
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "false",
+        "complete": "true",
+        "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 910,
+        "x": 890,
         "y": 280,
         "wires": []
     },
@@ -87,6 +94,23 @@
         "className": "",
         "x": 920,
         "y": 220,
+        "wires": []
+    },
+    {
+        "id": "23a847fcba4564fd",
+        "type": "debug",
+        "z": "f952b7eb395dcede",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 590,
+        "y": 280,
         "wires": []
     },
     {
